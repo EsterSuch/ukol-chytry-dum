@@ -11,12 +11,12 @@ const Light = ({ name, state }) => {
   </div>
 
   const [jeZapnuta, setJeZapnuta] = useState({ state });
-  const zapnout = () => {
-    setJeZapnuta(true);
-  };
-  const vypnout = () => {
-    setJeZapnuta(false);
-  };
+    const zapnout = () => {
+      setJeZapnuta('on');
+    };
+    const vypnout = () => {
+      setJeZapnuta('off');
+    };
 
   return (
     <div className="light" onClick={jeZapnuta ? zapnout : vypnout}>

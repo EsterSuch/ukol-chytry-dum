@@ -2,7 +2,7 @@ import React from 'react';
 import Light from '../Light';
 import '../Lights/style.css';
 
-const Lights = ({ lights }) => {
+const Lights = ({lights}) => {
   return (
     <>
       <div className="xxx">
