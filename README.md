@@ -150,3 +150,5 @@ Tvým cílem je vytvořit jednoduchý ovládací panel, u kterého budeme předs
 
 2. Odkaz na repozitář odevzdej jako řešení úkolu v [moje.czechitas.cz](https://moje.czechitas.cz).
 
+#   c h y t r y - d u m  
+ 
