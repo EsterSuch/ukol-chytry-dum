@@ -2,13 +2,12 @@ import React from 'react';
 import Light from '../Light';
 import '../Lights/style.css';
 
-const Lights = ({lights}) => {
+const Lights = ({ data.lights }) => {
   return (
     <>
       <div className="xxx">
-        {lights.map(room =>
+        {data.lights.map(room =>
           <Light key={room.name} name={room.name} state={room.state} />
-          )}
       </div>
     </>
   );

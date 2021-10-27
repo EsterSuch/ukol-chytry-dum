@@ -2,7 +2,7 @@ import React from 'react';
 import { render } from 'react-dom';
 import './style.css';
 
-import smartHomeData from './smartHomeData.js';
+import {smartHomeData} from './smartHomeData.js';
 import Header from './components/Header';
 import Dashboard from './components/Dashboard';
 

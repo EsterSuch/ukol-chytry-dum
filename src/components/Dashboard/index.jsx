@@ -3,13 +3,11 @@ import '../Dashboard/style.css';
 import Lights from '../Lights';
 
 
-const Dashboard = ({data}) => {
+const Dashboard = () => {
   return (
    <>
       <main className="dashboard">
-      {data.map(info => (
-          <Lights lights={info.lights} />
-        ))}
+      
         <Lights />
       </main>
     
