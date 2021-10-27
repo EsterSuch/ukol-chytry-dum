@@ -5,16 +5,16 @@ import Lights from '../Lights';
 
 const Dashboard = ({data}) => {
   return (
-    <>
+   <>
       <main className="dashboard">
-        {data.map(info => (
+      {data.map(info => (
           <Lights lights={info.lights} />
         ))}
         <Lights />
       </main>
     
-    </>
-  );
-}
+   </>
+  )
+};
 
 export default Dashboard;
