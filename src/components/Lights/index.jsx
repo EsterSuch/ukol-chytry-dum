@@ -6,11 +6,12 @@ const Lights = ({lights}) => {
   return (
     <>
       <div className="xxx">
-        {lights.map(light =>
-          <Light key={light.name} name={light.name} state={light.state} />)}
+        {lights.map(room =>
+          <Light key={room.name} name={room.name} state={room.state} />
+          )}
       </div>
     </>
-  )
+  );
 };
 
 export default Lights;
