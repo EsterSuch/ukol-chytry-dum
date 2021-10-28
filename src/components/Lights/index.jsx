@@ -5,7 +5,7 @@ import '../Lights/style.css';
 const Lights = ({lights}) => {
   return (
     <>
-      <div className="xxx">
+      <div className="lights">
         {lights.map(room =>
           <Light key={room.name} name={room.name} state={room.state} />
         )}

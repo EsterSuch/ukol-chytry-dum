@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import '../Light/style.css';
 
 import sviti from '../Light/light-on.svg';
@@ -6,10 +6,6 @@ import nesviti from '../Light/light-off.svg';
 
 
 const Light = ({ name, state }) => {
-
-  <div className="light__name">
-    <p>{name}</p>
-  </div>
 
   const [svetlo, setSvetlo] = useState(state);
   const zapnout = () => {
@@ -21,14 +17,15 @@ const Light = ({ name, state }) => {
 
   return (
     <div className="light" onClick={svetlo ? zapnout : vypnout}>
-      
-      <img className="light__icon"
-        src={svetlo ? sviti : nesviti}
-        alt={svetlo ? "Zapnutá žárovka" : "Vypnutá žárovka"}
-      />
+      <div className="light__icon">
+        <img
+          src={svetlo ? sviti : nesviti}
+          alt={svetlo ? "Zapnutá žárovka" : "Vypnutá žárovka"} />
+      </div>
 
-
+      <div className="light__name">{name}</div>
     </div>
+
   )
 };
 
