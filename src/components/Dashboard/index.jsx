@@ -6,15 +6,15 @@ import Blinds from '../Blinds';
 import Energy from '../Energy';
 
 
-const Dashboard = () => {
+const Dashboard = ({data}) => {
   return (
     <>
       <main className="dashboard">
 
-        <Lights />
-        <Climate />
-        <Blinds />
-        <Energy />
+        <Lights lights={data.lights} />
+        <Climate temperature={data.climate.temperature} humidity={data.climate.humidity} />
+        <Blinds state={data.blinds} />
+        <Energy energy={data.energyConsumption.electricity} water={data.energyConsumption.water} />
 
       </main>
 

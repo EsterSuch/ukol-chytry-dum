@@ -9,10 +9,10 @@ const Light = ({ name, state }) => {
 
   const [svetlo, setSvetlo] = useState(state);
   const zapnout = () => {
-    setSvetlo('on');
+    setSvetlo(true);
   };
   const vypnout = () => {
-    setSvetlo('off');
+    setSvetlo(state='off');
   };
 
   return (

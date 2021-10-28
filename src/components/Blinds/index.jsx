@@ -4,13 +4,17 @@ import '../Blinds/style.css';
 import roztazeno from '../Blinds/blinds-open.svg';
 import zatazeno from '../Blinds/blinds-closed.svg';
 
-const Blinds = () => {
-  const [zaves, setZaves] = useState(open);
+
+const Blinds = (state) => {
+
+  state==='open' ? blindsOpen : blindsOff;
+  
+  const [zaves, setZaves] = useState(state);
   const blindsOpen = () => {
-    setZaves(open);
+    setZaves(true);
   };
   const blindsOff = () => {
-    setZaves(close);
+    setZaves(false);
   };
   return (
     <>
@@ -25,14 +29,13 @@ const Blinds = () => {
         <div className="blinds__name">Žaluzie</div>
 
         <div className="blinds__controls">
-          <button onClick={blindsOpen} className={open ? 'button button--active' : 'button'}>Otevřeno</button>
-          <button onClick={blindsOff} className={!open ? 'button' : 'button button--active'}>Zavřeno</button>
+          <button onClick={blindsOpen} className={zaves ? 'button button--active' : 'button'}>Otevřeno</button>
+          <button onClick={blindsOff} className={zaves ? 'button' : 'button button--active'}>Zavřeno</button>
         </div>
       </div>
     
     </>
   )
-
 
 };
 
