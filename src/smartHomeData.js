@@ -21,7 +21,7 @@ export const smartHomeData = {
     temperature: 24,
     humidity: 50,
   },
-  blinds: 'close',
+  blinds: 'open',
   energyConsumption: {
     electricity: 36.7,
     water: 14.1,
