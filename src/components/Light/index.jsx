@@ -9,18 +9,18 @@ const Light = ({ name, state }) => {
 
   const [svetlo, setSvetlo] = useState(state);
   const zapnout = () => {
-    setSvetlo(true);
+    setSvetlo('on');
   };
   const vypnout = () => {
     setSvetlo(state='off');
   };
 
   return (
-    <div className="light" onClick={svetlo ? zapnout : vypnout}>
+    <div className="light" onClick={svetlo==='on' ? vypnout : zapnout}>
       <div className="light__icon">
         <img
-          src={svetlo ? sviti : nesviti}
-          alt={svetlo ? "Zapnutá žárovka" : "Vypnutá žárovka"} />
+          src={svetlo==='on' ? sviti : nesviti}
+          alt={svetlo==='on' ? "sviti" : "nesviti"} />
       </div>
 
       <div className="light__name">{name}</div>
